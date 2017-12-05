@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditText
+        android:id="@+id/edt_wordToSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="輸入儲存文字"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textSize="30dp" />
+    <Button
+        android:id="@+id/btn_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load"
+        android:textSize="30dp" />
+    <TextView
+        android:id="@+id/txt_lordWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取得文字"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=
+            "1.取得sharePreference\n
+            SharedPreferences table=getSharedPreferences(key,0);\n
+            2.取得Edit\n
+            SharedPreferences.Editor ed=table.edit();\n
+            3.放入key、value\n，最後commit\n
+            ed.putString(key,value).commit();\n
+            4.取得sharePreference\n
+            5.set key to get value"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <Button
+        android:id="@+id/btnProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="開啟進度條.spinner"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/btnProgress2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="開啟進度條.horizon"
+        android:textSize="30dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=
+    "ProgressDialog pro=new ProgressDialog(Progress.this);\n
+    pro.setTitle(STYLE_SPINNER);\n
+    pro.setMax(100);\n
+    pro.setProgressStyle(ProgressDialog.STYLE_SPINNER);\n
+    pro.incrementProgressBy(50);\n
+    pro.show();"/>
+</LinearLayout>

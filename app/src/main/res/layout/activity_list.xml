@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Act1\:\n
+        使用ActivityForResult接受表單選擇"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Act2\n
+        設定為ListActivity\n
+        ListAdapter adp=new ArrayAdapter(String)(List.this,android.R.layout.simple_selectable_list_item,list);\n
+        this.setListAdapter(adp);\n
+        protected void onListItemClick(ListView l, View v, int position, long id) {\n
+        super.onListItemClick(l, v, position, id);\n
+        Intent intent=new Intent();\n
+        Bundle bd_ListChosen=new Bundle();\n
+        bd_ListChosen.putString(KEY_TOTAL.LIST_CHOSEN,list[position].toString());\n
+        intent.putExtras(bd_ListChosen);\n
+        setResult(0,intent);\n
+        finish();}\n"/>
+
+    <TextView
+        android:id="@+id/txt_wordFromList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:text="來自表單的選項"/>
+    <Button
+       android:id="@+id/btn_toList"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:text="開啟表單視窗"
+        android:textSize="30dp"/>
+    </LinearLayout>
+</ScrollView>

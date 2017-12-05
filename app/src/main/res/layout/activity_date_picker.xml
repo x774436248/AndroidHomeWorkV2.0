@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選擇的日期"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/brntDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="開啟日期選擇視窗"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=
+            "Calendar todat=Calendar.getInstance();--取得日曆\n
+            Dialog datePicker=new DatePickerDialog--建立datepickerDialog\n
+            (DatePicker.this, new DatePickerDialog.OnDateSetListener()--指定沙盒、確定按下事件、初始年、月、日\n
+             {public void onDateSet(android.widget.DatePicker view, int year, int month, int dayOfMonth) {\n
+                    txt_date.setText(String.valueOf(year)++String.valueOf(month)++String.valueOf(dayOfMonth));}\n
+    },todat.get(Calendar.YEAR),todat.get(Calendar.MONTH),todat.get(Calendar.DATE));\n
+    datePicker.show();"/>
+
+</LinearLayout>

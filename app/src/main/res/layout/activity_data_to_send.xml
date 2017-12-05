@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Activity1:"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text=
+"Intent intent=new Intent(HomeWork.this,DataToSend.class);\n
+Bundle bd_words=new Bundle();\n
+bd_words.putString(KEY_TOTAL.KEY_OF_VIEW1_TO_VIEW2,etxt_wordToSend.getText().toString());\n
+intent.putExtras(bd_words);\n
+startActivityForResult(intent,KEY_TOTAL.DATA_CONNECTION);\n"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text=
+"protected void onActivityResult(int requestCode, int resultCode, Intent data) {\n
+super.onActivityResult(requestCode, resultCode, data);\n
+switch(requestCode){\n
+case KEY_TOTAL.DATA_CONNECTION:\n
+txt_getWord.setText(data.getExtras().getString(KEY_TOTAL.KEY_OF_VIEW2_TO_VIEW1));\n
+break;}}\n"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Activity2:\n"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text=
+"private void initialComponent() {\n
+Intent intent_From_View1=this.getIntent();\n
+wordFromView1.setText(intent_From_View1.getExtras().getString(Key_For_View.Word_For_View2));}\n
+
+public void onClick(View v) {\n
+Intent intent=new Intent();\n
+Bundle bd_back=new Bundle();\n
+bd_back.putString(KEY_TOTAL.KEY_OF_VIEW2_TO_VIEW1,wordToSendBack.getText().toString());\n
+intent.putExtras(bd_back);\n
+setResult(0,intent);\n
+finish();}};\n"/>
+
+    <TextView
+        android:id="@+id/txt_wordFromView1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WordsFromView1"
+        android:textAlignment="center"
+        android:textSize="20dp"/>
+    <EditText
+        android:id="@+id/etxt_wordsToSendBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="傳送回View1"
+        android:textSize="20dp"/>
+    </LinearLayout>
+
+</ScrollView>
+
+

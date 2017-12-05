@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:id="@+id/txtChosen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選中項目"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/press"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:text="按我顯示選單"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=
+"1.先設定為AppCompatActivity\n
+2.public void onCreateContextMenu(\n
+        ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {\n
+        menu.add(0,0,1,選項一);\n
+        menu.add(0,1,2,選項二);\n
+        super.onCreateContextMenu(menu, v, menuInfo);}\n
+3.public boolean onContextItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case 0:
+                txt_chosen.setText(選項一);
+                break;
+            case 1:
+                txt_chosen.setText(選項二);
+                break;            }
+        return super.onContextItemSelected(item);}\n
+4.設定初始 registerForContextMenu(txt_press);"/>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <TextView
+        android:id="@+id/txt_chosen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="選中的項目"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/btn_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="彈跳選單"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="private DialogInterface.OnClickListener list_Chosen = new DialogInterface.OnClickListener() {\n
+    public void onClick(DialogInterface dialog, int which) {\n
+    chosen.setText(popList[which]);}};\n
+
+    private View.OnClickListener btn_pop_Click = new View.OnClickListener() {\n
+    public void onClick(View v) {\n
+    android.app.AlertDialog.Builder l_builder = new android.app.AlertDialog.Builder(AltList.this);\n
+    l_builder.setTitle(.setTitle);\n
+    //l_builder.setMessage(.setMessage);\n
+    l_builder.setItems(popList, list_Chosen);\n
+    Dialog dialog = l_builder.create();\n
+    dialog.show();}};\n"/>
+
+</LinearLayout>

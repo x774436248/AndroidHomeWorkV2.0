@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <Button
+        android:id="@+id/btnToastPop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toast"
+        android:textSize="30dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=
+            "Toast toa=Toast.makeText(Toasts.this,Toast,Toast.LENGTH_SHORT);--指頂沙盒、給定文字、指定顯示時間\n
+            toa.show();"/>
+</LinearLayout>

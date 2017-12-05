@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <Button
+        android:id="@+id/btnNot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="notification"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=
+        "RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)--需標註使用版本\n
+            Notification not=new Notification.Builder(Notifiations.this)\n
+               .setSmallIcon(android.R.drawable.stat_sys_warning)\n
+               .setContentTitle(Notification)\n
+               .setContentText(這是Notification)\n
+               .build();--給定沙盒、設定圖示、給標題、內容、建立\n
+            NotificationManager mana=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);--建立管理員\n
+            mana.notify(1,not);--管理員開啟通知"/>
+
+</LinearLayout>
